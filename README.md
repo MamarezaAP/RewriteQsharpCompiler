@@ -10,5 +10,7 @@ In Q#, the ability to view default operations, functions, and its public types. 
 Let's use the IRewriteStep scalability infrastructure to create a custom approach to accessing modifiers. Instead of choosing between default (public) behavior and having an internal keyword, we want to use contract-based access using the following rules:
 
 If the first letter can be capitalized, it should always be public
+
 If the first letter cannot be capitalized, it must always be internal
+
 Because of the simplicity of this example, we limit ourselves to callers only, but the logic in question can be easily generalized to user-defined types as well. To achieve all this, we create a netstandard2.1 C# library project that points to the quantum compiler.
